@@ -1,0 +1,81 @@
+@use 'variables' as *; //this puts all the variables in the global namespace.
+@use 'atoms';
+//@use 'molecules';
+//@use 'organisms' as o;
+
+* {
+  box-sizing: border-box;
+}
+html {
+  background-color: $background-color;
+  padding: 5%;
+}
+header h1{
+  padding: 0px 10px;
+  color: $text-light;
+  font-size: 4em;
+  font-weight: 900;
+  text-shadow: 2px 3px $accent2;
+
+}
+
+body {
+  font-family: $fonts-body;
+  font-size: 85%;
+  color: $text-dark;
+  background-color: $primary;
+  margin: 0;
+  padding: 1em;
+}
+
+section {
+  background-color: white;
+  padding: 1em;
+  margin: 1em;
+}
+.colors {
+  @include atoms.set-flex();
+  > h3 {
+    width: 100%;
+    flex: 1 0 100%;
+  }
+  > figure {
+    margin: 0;
+    flex: 1 1 25%;
+  }
+}
+.swatch {
+  width: 100%;
+  height: 100px;
+  border: 1px solid;
+}
+
+.description{
+  padding: 0px 10px;
+  color: $text-light;
+  text-shadow: .5px .5px $accent2;
+}
+
+.primary {
+  background-color: $background-color;
+}
+.accent1 {
+  background-color: $primary;
+}
+.accent2 {
+  background-color: $accent1;
+}
+.text-dark {
+  background-color: $accent2;
+}
+.element {
+  border: 1px solid $accent2;
+  margin: 0.5em;
+  padding: 1em;
+}
+.uppercase {
+  @include atoms.uppercase;
+}
+.uppercase-light {
+  @include atoms.uppercase($text-light);
+}
