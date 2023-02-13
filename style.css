@@ -52,6 +52,8 @@ h3 {
   font-weight: 200; /* Thin */
   letter-spacing: 1px;
   line-height: 1em;
+  color: #815136;
+  text-shadow: 0.5px 0.5px #815136;
   padding: 0.5em 0 0.25em 0;
 }
 @media screen and (max-width: 480px) {
@@ -72,7 +74,7 @@ p {
   font-family: "Noto Sans", sans-serif;
   font-size: 1em;
   line-height: 1.5em;
-  padding: 0.5em 0;
+  padding: 1% 2%;
   margin: 0;
 }
 
@@ -89,18 +91,34 @@ header {
   grid-area: head;
   display: flex;
   flex-flow: column nowrap;
-  justify-self: center;
-  align-self: center;
   align-items: center;
   justify-content: center;
+  background-color: #dbb68f;
 }
 
 .summary {
   grid-area: summary;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  border-style: dotted;
+  border: 2px dotted #0ca4a5;
+  padding: 5%;
+  text-align: justify;
+}
+@media screen and (max-width: 480px) {
+  .summary {
+    padding: 2%;
+    margin: 5%;
+  }
 }
 
 .preamble {
   grid-area: preamble;
+  background-color: white;
+  padding: 2%;
+  text-align: justify;
 }
 
 body {
@@ -119,20 +137,20 @@ html {
 
 #zen-intro {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1em;
-  grid-template-areas: ". head ." "preamble preamble preamble " ". summary .";
+  grid-template-areas: "head head head ." "navDesign . summary summary" "navDesign preamble preamble preamble ";
 }
 @media screen and (max-width: 480px) {
   #zen-intro {
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 5px;
     grid-auto-rows: minmax(200px, auto);
   }
 }
 @media screen and (max-width: 480px) {
   #zen-intro {
-    grid-template-areas: "head" "preamble" "summary";
+    grid-template-areas: "head" "navDesign" "summary" "preamble";
   }
 }
 

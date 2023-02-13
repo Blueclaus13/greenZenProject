@@ -1,29 +1,42 @@
-@mixin set-flex($direction: row, $wrap: wrap) {
-    display: flex;
-    flex-flow: $direction $wrap;
-  }
+@use 'variables' as *;
+
+@use 'atoms'; 
+
+
+
 
 header {
     grid-area: head;
-    @include set-flex(column, nowrap );
-    justify-self: center;
-    align-self: center;
+    @include atoms.set-flex(column, nowrap );
     align-items: center;
     justify-content: center;
-
-
-
+    background-color: $primary;
 }
 
 
 
 .summary {
     grid-area: summary;
+    @include atoms.uppercase($text-light);
+    border-style: dotted;
+    border: 2px dotted $accent1 ;
+    padding: 5%;
+    text-align: justify;
+
+    @media screen  and (max-width:480px){
+        padding: 2%;
+        margin: 5%;
+    }
+    
 
 }
 
 .preamble {
     grid-area: preamble;
+    background-color: white;
+    padding: 2%;
+    text-align: justify;
+    
 
 }
 
@@ -47,7 +60,9 @@ footer {
 
 }
 
-.design-selection{
+#design-selection{
+
+
 
 }
 

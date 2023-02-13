@@ -10,7 +10,7 @@
   
     @media screen  and (max-width:480px){
       grid-template-columns: 1fr;
-      gap: 0;
+      gap: 5px;
       grid-auto-rows: minmax(200px, auto);
       
     }
@@ -32,17 +32,20 @@
 
 //Claudia
 #zen-intro {
-    @include set-grid( 3, 1em);
+    @include set-grid( 4, 1em);
     grid-template-areas: 
-        ". head ."
-        "preamble preamble preamble "
-        ". summary .";
+        "head head head ."
+        "navDesign . summary summary"
+        "navDesign preamble preamble preamble ";
+
 
     @media screen  and (max-width:480px){
         grid-template-areas: 
         "head"
+        "navDesign"
+        "summary"
         "preamble"
-        "summary";
+        ;
     }
     
 
