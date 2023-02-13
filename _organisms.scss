@@ -1,5 +1,50 @@
+@use 'variables' as *;
+
+@use 'atoms'; 
+@use 'molecules';
+
+@mixin set-grid($columns, $space){
+    display: grid;
+    grid-template-columns: repeat( $columns, 1fr);
+    gap: $space;
+  
+    @media screen  and (max-width:480px){
+      grid-template-columns: 1fr;
+      gap: 0;
+      grid-auto-rows: minmax(200px, auto);
+      
+    }
+  }
+
+  body{
+    font-family: $fonts-body;
+    font-size: 85%;
+    color: $text-dark;
+    background-color: $primary;
+    margin: 0;
+    padding: 1em;
+  }
+
+  html {
+    background-color: $background-color;
+    padding: 5%;
+  }
+
 //Claudia
 #zen-intro {
+    @include set-grid( 3, 1em);
+    grid-template-areas: 
+        ". head ."
+        "preamble preamble preamble "
+        ". summary .";
+
+    @media screen  and (max-width:480px){
+        grid-template-areas: 
+        "head"
+        "preamble"
+        "summary";
+    }
+    
 
 }
 

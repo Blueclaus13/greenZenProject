@@ -1,12 +1,29 @@
+@mixin set-flex($direction: row, $wrap: wrap) {
+    display: flex;
+    flex-flow: $direction $wrap;
+  }
+
 header {
+    grid-area: head;
+    @include set-flex(column, nowrap );
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+
+
 
 }
 
+
+
 .summary {
+    grid-area: summary;
 
 }
 
 .preamble {
+    grid-area: preamble;
 
 }
 

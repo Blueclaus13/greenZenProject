@@ -12,6 +12,8 @@
   flex-flow: $direction $wrap;
 }
 
+
+
 @mixin uppercase($color: $text-dark) {
   font-weight: 300;
   letter-spacing: 2px;
@@ -37,18 +39,35 @@ p, h4 {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 4em;
   font-family: $fonts-headline;
   color: $text-dark;
   font-weight: normal;
+}
+header h1{
+  padding: 0px 10px;
+  color: $text-light;
+  font-size: 7em;
+  font-weight: 900;
+  text-shadow: 2px 3px $accent2;
+  margin: 0;
+  word-wrap: break-word;
+
+  @media screen  and (max-width:480px){
+    font-size: 5em;
+  }
+
 }
 
 h2 {
   color: $text-light;
   font-weight: 900; /* Heavy */
-  font-size: 6em;
+  font-size: 3em;
   letter-spacing: 1px;
   line-height: 1em;
+  @media screen  and (max-width:480px){
+    font-size: 2em;
+  }
 }
 h3 {
   font-size: 2.25em;
@@ -56,6 +75,9 @@ h3 {
   letter-spacing: 1px;
   line-height: 1em;
   padding: 0.5em 0 0.25em 0;
+  @media screen  and (max-width:480px){
+    font-size: 1.7em;
+  }
 }
 h4 {
   font-size: 1.5em;
