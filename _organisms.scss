@@ -4,34 +4,42 @@
 @use 'molecules';
 
 @mixin set-grid($columns, $space){
-    display: grid;
-    grid-template-columns: repeat( $columns, 1fr);
-    gap: $space;
+  display: grid;
+  grid-template-columns: repeat( $columns, 1fr);
+  gap: $space;
   
-    @media screen  and (max-width:480px){
-      grid-template-columns: 1fr;
-      gap: 5px;
-      grid-auto-rows: minmax(200px, auto);
+  @media screen  and (max-width:480px){
+    grid-template-columns: 1fr;
+    gap: 5px;
+    grid-auto-rows: minmax(200px, auto);
       
     }
-  }
+}
 
-  body{
-    font-family: $fonts-body;
-    font-size: 85%;
-    color: $text-dark;
-    background-color: $primary;
-    margin: 0;
-    padding: 1em;
-  }
 
-  html {
-    background-color: $background-color;
-    padding: 5%;
-  }
+// This sets the main grid for the page grid.
+.page-wrapper{
+  @include set-grid( 4, 1em);
+  grid-template-areas: 
+      "intro intro intro intro"
+      "sidebar main main main"
+      "sidebar main main main"
+      ". footer footer footer";
+
+  @media screen  and (max-width:680px){
+    @include set-grid(1, 1em );
+    grid-template-areas: 
+      "intro"
+      "sidebar"
+      "main"
+      "footer";
+      }
+  
+}
 
 //Claudia
 #zen-intro {
+    grid-area: intro;
     @include set-grid( 4, 1em);
     grid-template-areas: 
         "head head head ."
@@ -53,14 +61,15 @@
 
 //Ammon
 .main {
-
+  grid-area: main;
 }
 
 //Brea
 .sidebar {
-
+  grid-area: sidebar;
 }
 
 .wrapper {
+  
     
 }

@@ -1,6 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Noto+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Lancelot&family=Noto+Sans&display=swap");
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 85%;
+  color: #333;
+  background-color: #dbb68f;
+  margin: 0;
+  padding: 1em;
+}
+
+html {
+  background-color: #0892a5;
+  padding: 5%;
+}
+
 h2,
 h3 {
   font-family: "Lancelot", cursive;
@@ -121,21 +135,37 @@ header {
   text-align: justify;
 }
 
-body {
-  font-family: "Noto Sans", sans-serif;
-  font-size: 85%;
-  color: #333;
-  background-color: #dbb68f;
-  margin: 0;
-  padding: 1em;
+.page-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+  grid-template-areas: "intro intro intro intro" "sidebar main main main" "sidebar main main main" ". footer footer footer";
 }
-
-html {
-  background-color: #0892a5;
-  padding: 5%;
+@media screen and (max-width: 480px) {
+  .page-wrapper {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    grid-auto-rows: minmax(200px, auto);
+  }
+}
+@media screen and (max-width: 680px) {
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1em;
+    grid-template-areas: "intro" "sidebar" "main" "footer";
+  }
+}
+@media screen and (max-width: 680px) and (max-width: 480px) {
+  .page-wrapper {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    grid-auto-rows: minmax(200px, auto);
+  }
 }
 
 #zen-intro {
+  grid-area: intro;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1em;
@@ -152,6 +182,14 @@ html {
   #zen-intro {
     grid-template-areas: "head" "navDesign" "summary" "preamble";
   }
+}
+
+.main {
+  grid-area: main;
+}
+
+.sidebar {
+  grid-area: sidebar;
 }
 
 /*# sourceMappingURL=style.css.map */
