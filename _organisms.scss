@@ -71,10 +71,10 @@
 
 .wrapper {
   @media screen  and (max-width:680px){
-    .select > ul, .archives >ul, .resources > ul {
+    .design-selection > ul, .design-archives >ul, .zen-resources > ul {
       visibility: collapse;
     }
-    .select > ul:hover, .archives >ul:hover, .resources > ul:hover {
+    .design-selection > ul:hover, .design-archives >ul:hover, .zen-resources > ul:hover {
       visibility: visible;
     }
   }
