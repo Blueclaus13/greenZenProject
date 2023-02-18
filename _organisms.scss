@@ -71,7 +71,7 @@
 
 .wrapper {
   @media screen  and (max-width:680px){
-    .design-selection > ul, .design-archives >ul, .zen-resources > ul {
+    .design-selection > ul, .design-archives > ul, .zen-resources > ul {
       visibility: collapse;
     }
     .design-selection > ul:hover, .design-archives >ul:hover, .zen-resources > ul:hover {
