@@ -1,0 +1,30 @@
+-- Plus Symbols --
+background-color: $primary;
+opacity: 0.8;
+background: radial-gradient(circle, transparent 20%, $primary 20%, $primary 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, $primary 20%, $primary 80%, transparent 80%, transparent) 25px 25px, linear-gradient($background-color 2px, transparent 2px) 0 -1px, linear-gradient(90deg, $background-color 2px, $primary 2px) -1px 0;
+background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+
+
+
+
+--grid paper css--
+  background-color: $primary;
+  opacity: 0.8;
+  background-image:  linear-gradient($background-color 2px, transparent 2px), linear-gradient(90deg, $background-color 2px, transparent 2px), linear-gradient($background-color 1px, transparent 1px), linear-gradient(90deg, $background-color 1px, $primary 1px);
+  background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+
+-- squares --
+background-color: $primary;
+opacity: 0.8;
+background-image:  linear-gradient($background-color 1px, transparent 1px), linear-gradient(to right, $background-color 1px, $primary 1px);
+background-size: 20px 20px;
+
+
+-- zig zag --
+background-color: $primary;
+opacity: 0.8;
+background-image:  linear-gradient(135deg, $background-color 25%, transparent 25%), linear-gradient(225deg, $background-color 25%, transparent 25%), linear-gradient(45deg, $background-color 25%, transparent 25%), linear-gradient(315deg, $background-color 25%, $primary 25%);
+background-position:  10px 0, 10px 0, 0 0, 0 0;
+background-size: 40px 40px;
+background-repeat: repeat;
