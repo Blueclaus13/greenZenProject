@@ -101,6 +101,10 @@ a:hover {
   color: #815136;
 }
 
+ul {
+  list-style-image: url(shapes/radiant-092A5-small.png);
+}
+
 header {
   grid-area: head;
   display: flex;
@@ -189,15 +193,6 @@ header {
 
 .sidebar {
   grid-area: sidebar;
-}
-
-@media screen and (max-width: 680px) {
-  .wrapper .design-selection > ul, .wrapper .design-archives > ul, .wrapper .zen-resources > ul {
-    visibility: collapse;
-  }
-  .wrapper .design-selection > ul:hover, .wrapper .design-archives > ul:hover, .wrapper .zen-resources > ul:hover {
-    visibility: visible;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
