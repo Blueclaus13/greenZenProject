@@ -67,11 +67,7 @@
 //Brea
 .sidebar {
   grid-area: sidebar;
-}
-
-.wrapper {
-  @media screen  and (max-width:680px){
- 
+  ul {
+    list-style-image: url(rectangle\ gem.png);
   }
-    
 }
