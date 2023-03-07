@@ -202,9 +202,18 @@ ul {
 header {
   grid-area: head;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
+}
+@media screen and (max-width: 480px) {
+  header {
+    grid-area: head;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
 }
 
 .summary {
@@ -295,7 +304,7 @@ footer {
 }
 @media screen and (max-width: 480px) {
   .page-wrapper {
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     gap: 5px;
     grid-auto-rows: minmax(200px, auto);
   }
@@ -310,7 +319,7 @@ footer {
 }
 @media screen and (max-width: 680px) and (max-width: 480px) {
   .page-wrapper {
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     gap: 5px;
     grid-auto-rows: minmax(200px, auto);
   }
@@ -321,18 +330,18 @@ footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1em;
-  grid-template-areas: "head head head ." "navDesign . summary summary" "navDesign preamble preamble preamble ";
+  grid-template-areas: ". head head head" "summary preamble preamble ." "summary preamble preamble . ";
 }
 @media screen and (max-width: 480px) {
   #zen-intro {
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     gap: 5px;
     grid-auto-rows: minmax(200px, auto);
   }
 }
 @media screen and (max-width: 480px) {
   #zen-intro {
-    grid-template-areas: "head" "navDesign" "summary" "preamble";
+    grid-template-areas: "head" "summary" "preamble";
   }
 }
 

@@ -9,7 +9,7 @@
   gap: $space;
   
   @media screen  and (max-width:480px){
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     gap: 5px;
     grid-auto-rows: minmax(200px, auto);
       
@@ -42,18 +42,16 @@
     grid-area: intro;
     @include set-grid( 4, 1em);
     grid-template-areas: 
-        "head head head ."
-        "navDesign . summary summary"
-        "navDesign preamble preamble preamble ";
+        ". head head head"
+        "summary preamble preamble ."
+        "summary preamble preamble . ";
 
 
     @media screen  and (max-width:480px){
-        grid-template-areas: 
+      grid-template-areas: 
         "head"
-        "navDesign"
         "summary"
-        "preamble"
-        ;
+        "preamble";
     }
     
 
