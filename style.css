@@ -101,6 +101,100 @@ a:hover {
   color: #815136;
 }
 
+.explanation h3 {
+  grid-column: 1/-1;
+  text-align: left;
+}
+
+.explanation p {
+  grid-column: 1/3;
+}
+
+.explanation::after {
+  text-align: center;
+  grid-column: 3/-1;
+  grid-row: 2/4;
+  content: url("./pictures/diamond.png");
+}
+
+.participation h3 {
+  grid-column: 2/-1;
+  text-align: right;
+}
+
+.participation p {
+  grid-column: 2/-1;
+  text-align: right;
+}
+
+.participation::before {
+  text-align: center;
+  grid-column: 1/2;
+  grid-row: 1/5;
+  content: url("./pictures/emerald2.png");
+}
+
+.requirements h3 {
+  text-align: left;
+  grid-row: 1;
+  grid-column: 1/-1;
+}
+
+.requirements p {
+  grid-column: 1/3;
+}
+
+.requirements::after {
+  grid-column: 3/-1;
+  grid-row: 1/3;
+  content: url("./pictures/bluediamon2.png");
+}
+
+.requirements p:nth-child(3) {
+  grid-column: 1/-1;
+}
+
+.requirements p:nth-child(4) {
+  grid-column: 1/-1;
+}
+
+.requirements p:nth-child(5) {
+  grid-column: 1/-1;
+}
+
+.requirements p:nth-child(6) {
+  grid-column: 1/-1;
+}
+
+footer a:nth-child(1):after {
+  content: url("./shapes/french-092A5-20px.png");
+  padding: 10px;
+}
+
+footer a:nth-child(2):after {
+  content: url("./shapes/drop-092A5-20px.png");
+  padding: 10px;
+}
+
+footer a:nth-child(3):after {
+  content: url("./shapes/emerald-092A5-20px.png");
+  padding: 10px;
+}
+
+footer a:nth-child(4):after {
+  content: url("./shapes/halfRose-092A5-20px.png");
+  padding: 10px;
+}
+
+footer a:nth-child(5):after {
+  content: url("./shapes/heart-092A5-20px.png");
+  padding: 10px;
+}
+
+ul {
+  list-style-image: url("rectanglegem.png");
+}
+
 header {
   grid-area: head;
   display: flex;
@@ -132,6 +226,61 @@ header {
   background-color: white;
   padding: 2%;
   text-align: justify;
+}
+
+.explanation {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+@media screen and (max-width: 480px) {
+  .explanation {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    grid-auto-rows: minmax(200px, auto);
+  }
+}
+
+.participation {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  justify-content: end;
+  margin-top: 20px;
+}
+@media screen and (max-width: 480px) {
+  .participation {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    grid-auto-rows: minmax(200px, auto);
+  }
+}
+
+.benefits {
+  margin: 30px auto;
+}
+
+.requirements {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+@media screen and (max-width: 480px) {
+  .requirements {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    grid-auto-rows: minmax(200px, auto);
+  }
+}
+
+footer {
+  display: flex;
+  gap: 25px;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  font-size: 1.5em;
+  margin-top: 20px;
 }
 
 .page-wrapper {
@@ -189,15 +338,6 @@ header {
 
 .sidebar {
   grid-area: sidebar;
-}
-
-@media screen and (max-width: 680px) {
-  .wrapper .design-selection > ul, .wrapper .design-archives > ul, .wrapper .zen-resources > ul {
-    visibility: collapse;
-  }
-  .wrapper .design-selection > ul:hover, .wrapper .design-archives > ul:hover, .wrapper .zen-resources > ul:hover {
-    visibility: visible;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

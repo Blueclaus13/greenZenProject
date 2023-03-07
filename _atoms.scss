@@ -31,16 +31,7 @@ body{
   font-family: $fonts-body;
   font-size: 85%;
   color: $text-dark;
-  
-
-
   background-color: $primary;
-
-  //background-image:  linear-gradient($background-color 2px, transparent 2px), linear-gradient(90deg, $background-color 2px, transparent 2px), linear-gradient($background-color 1px, transparent 1px), linear-gradient(90deg, $background-color 1px, $primary 1px);
-  //background-size: 350px 350px, 350px 350px, 310px 310px, 310px 310px;
-  //background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
-
-
   margin: 0;
   padding: 1em;
 }
@@ -125,6 +116,98 @@ a {
 }
 a:hover {
   color: $accent2;
+}
+
+.explanation h3{
+  grid-column: 1 / -1;
+  text-align: left;
+}
+
+.explanation p{
+  grid-column: 1 / 3; 
+}
+
+.explanation::after{
+    text-align: center;
+    grid-column: 3/ -1;
+    grid-row: 2 /4;
+    content: url('./pictures/diamond.png');
+}
+
+.participation h3{
+  grid-column: 2 / -1;
+  text-align: right;
+
+}
+
+.participation p{
+  grid-column: 2 / -1 ;
+  text-align: right;
+}
+
+.participation::before{
+  text-align: center;
+  grid-column: 1 / 2;
+  grid-row: 1 / 5;
+  content: url('./pictures/emerald2.png');
+
+}
+
+.requirements h3{
+  text-align: left;
+  grid-row: 1;
+  grid-column: 1 / -1;
+}
+
+.requirements p{
+  grid-column: 1 / 3; 
+}
+
+.requirements::after{
+    grid-column: 3/ -1;
+    grid-row: 1 / 3;
+    content: url('./pictures/bluediamon2.png');
+}
+
+.requirements p:nth-child(3){
+  grid-column: 1 / -1; 
+}
+
+.requirements p:nth-child(4){
+  grid-column: 1 / -1; 
+}
+
+.requirements p:nth-child(5){
+  grid-column: 1 / -1; 
+}
+
+.requirements p:nth-child(6){
+  grid-column: 1 / -1; 
+}
+
+
+footer a:nth-child(1):after{
+  content: url('./shapes/french-092A5-20px.png');
+  padding: 10px;
+}
+
+footer a:nth-child(2):after{
+  content: url('./shapes/drop-092A5-20px.png');
+  padding: 10px;
+}
+
+footer a:nth-child(3):after{
+  content: url('./shapes/emerald-092A5-20px.png');
+  padding: 10px;
+}
+
+footer a:nth-child(4):after{
+  content: url('./shapes/halfRose-092A5-20px.png');
+  padding: 10px;
+}
+footer a:nth-child(5):after{
+  content: url('./shapes/heart-092A5-20px.png');
+  padding: 10px;
 }
 
 ul{
