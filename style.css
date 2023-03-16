@@ -42,7 +42,7 @@ header h1 {
   margin: 0;
   word-wrap: break-word;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 680px) {
   header h1 {
     font-size: 5em;
   }
@@ -55,7 +55,7 @@ h2 {
   letter-spacing: 1px;
   line-height: 1em;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 680px) {
   h2 {
     font-size: 2em;
   }
@@ -70,7 +70,7 @@ h3 {
   text-shadow: 0.5px 0.5px #815136;
   padding: 0.5em 0 0.25em 0;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 680px) {
   h3 {
     font-size: 1.7em;
   }
@@ -105,33 +105,92 @@ a:hover {
   grid-column: 1/-1;
   text-align: left;
 }
+@media screen and (max-width: 680px) {
+  .explanation h3 {
+    grid-column: 1fr;
+    justify-self: left;
+    align-self: center;
+  }
+}
 
 .explanation p {
-  grid-column: 1/3;
+  grid-column: 1/4;
+}
+@media screen and (max-width: 680px) {
+  .explanation p {
+    grid-column: span 2;
+  }
 }
 
 .explanation::after {
   text-align: center;
-  grid-column: 3/-1;
+  grid-column: 4/-1;
   grid-row: 2/4;
-  content: url("./pictures/diamond.png");
+  background-image: url("/pictures/diamond.png");
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  content: "";
+}
+@media screen and (max-width: 680px) {
+  .explanation::after {
+    grid-column: 2/-1;
+    grid-row: 1/2;
+    min-height: 100px;
+    min-width: 38vw;
+    background-size: 50% auto;
+  }
 }
 
 .participation h3 {
   grid-column: 2/-1;
   text-align: right;
 }
+@media screen and (max-width: 680px) {
+  .participation h3 {
+    grid-column: 1/2;
+    grid-row: 1;
+    justify-self: left;
+    align-self: center;
+  }
+}
 
 .participation p {
   grid-column: 2/-1;
   text-align: right;
+}
+@media screen and (max-width: 680px) {
+  .participation p {
+    grid-column: span 2;
+    justify-self: left;
+    text-align: left;
+  }
 }
 
 .participation::before {
   text-align: center;
   grid-column: 1/2;
   grid-row: 1/5;
-  content: url("./pictures/emerald2.png");
+  background-image: url("./pictures/emerald2.png");
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  content: "";
+}
+@media screen and (max-width: 680px) {
+  .participation::before {
+    grid-column: 2/-1;
+    grid-row: 1/2;
+    min-height: 100px;
+    min-width: 38vw;
+    background-size: 38% auto;
+  }
 }
 
 .requirements h3 {
@@ -139,31 +198,70 @@ a:hover {
   grid-row: 1;
   grid-column: 1/-1;
 }
+@media screen and (max-width: 680px) {
+  .requirements h3 {
+    grid-column: 1fr;
+    justify-self: left;
+    align-self: center;
+  }
+}
 
 .requirements p {
   grid-column: 1/3;
 }
+@media screen and (max-width: 680px) {
+  .requirements p {
+    grid-column: span 2;
+  }
+}
 
 .requirements::after {
   grid-column: 3/-1;
-  grid-row: 1/3;
-  content: url("./pictures/bluediamon2.png");
+  grid-row: 2/4;
+  background-image: url("./pictures/Amethyst2.png");
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: auto;
+  height: 100%;
+  content: "";
 }
-
-.requirements p:nth-child(3) {
-  grid-column: 1/-1;
+@media screen and (max-width: 680px) {
+  .requirements::after {
+    grid-column: 2/-1;
+    grid-row: 1/2;
+    min-height: 100px;
+    min-width: 38vw;
+    background-size: 38% auto;
+  }
 }
 
 .requirements p:nth-child(4) {
   grid-column: 1/-1;
 }
+@media screen and (max-width: 680px) {
+  .requirements p:nth-child(4) {
+    grid-column: span 2;
+  }
+}
 
 .requirements p:nth-child(5) {
   grid-column: 1/-1;
 }
+@media screen and (max-width: 680px) {
+  .requirements p:nth-child(5) {
+    grid-column: span 2;
+  }
+}
 
 .requirements p:nth-child(6) {
   grid-column: 1/-1;
+}
+@media screen and (max-width: 680px) {
+  .requirements p:nth-child(6) {
+    grid-column: span 2;
+  }
 }
 
 footer a:nth-child(1):after {
@@ -189,10 +287,6 @@ footer a:nth-child(4):after {
 footer a:nth-child(5):after {
   content: url("./shapes/heart-092A5-20px.png");
   padding: 10px;
-}
-
-ul {
-  list-style-image: url("rectanglegem.png");
 }
 
 ul {
@@ -330,7 +424,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1em;
-  grid-template-areas: ". head head head" "summary preamble preamble ." "summary preamble preamble . ";
+  grid-template-areas: ". head head head" "summary preamble preamble preamble" "summary preamble preamble preamble";
 }
 @media screen and (max-width: 480px) {
   #zen-intro {
