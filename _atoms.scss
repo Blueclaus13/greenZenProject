@@ -211,22 +211,22 @@ a:hover {
 }
 
 .requirements p{
-  grid-column: 1 / 3; 
+  grid-column: 1 / 4; 
   @media screen  and (max-width:680px){
     grid-column: span 2;
   }
 }
 
 .requirements::after{
-    grid-column: 3/ -1;
+    grid-column: 4/ -1;
     grid-row: 2 / 4;
-    background-image: url('./pictures/Amethyst2.png');
-    background-size: auto 100% ;
+    background-image: url('./pictures/emerald1.png');
+    background-size: 100% auto  ;
     background-position: center;
     background-repeat: no-repeat;
     display: inline-block;
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: auto;
     content:"";
     @media screen  and (max-width:680px){
       grid-column: 2 / -1;
@@ -259,29 +259,33 @@ a:hover {
   } 
 }
 
+footer a{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 footer a:nth-child(1):after{
   content: url('./shapes/french-092A5-20px.png');
-  padding: 10px;
 }
 
 footer a:nth-child(2):after{
   content: url('./shapes/drop-092A5-20px.png');
-  padding: 10px;
+  
 }
 
 footer a:nth-child(3):after{
   content: url('./shapes/emerald-092A5-20px.png');
-  padding: 10px;
+  
 }
 
 footer a:nth-child(4):after{
   content: url('./shapes/halfRose-092A5-20px.png');
-  padding: 10px;
+ 
 }
 footer a:nth-child(5):after{
   content: url('./shapes/heart-092A5-20px.png');
-  padding: 10px;
+  
 }
 
 ul {
