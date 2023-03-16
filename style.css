@@ -401,7 +401,7 @@ footer {
   .page-wrapper {
     grid-template-columns: 100%;
     gap: 5px;
-    grid-auto-rows: minmax(200px, auto);
+    grid-auto-rows: minmax(10px, auto);
   }
 }
 @media screen and (max-width: 680px) {
@@ -416,7 +416,7 @@ footer {
   .page-wrapper {
     grid-template-columns: 100%;
     gap: 5px;
-    grid-auto-rows: minmax(200px, auto);
+    grid-auto-rows: minmax(10px, auto);
   }
 }
 
@@ -431,7 +431,7 @@ footer {
   #zen-intro {
     grid-template-columns: 100%;
     gap: 5px;
-    grid-auto-rows: minmax(200px, auto);
+    grid-auto-rows: minmax(10px, auto);
   }
 }
 @media screen and (max-width: 480px) {

@@ -11,7 +11,7 @@
   @media screen  and (max-width:480px){
     grid-template-columns: 100%;
     gap: 5px;
-    grid-auto-rows: minmax(200px, auto);
+    grid-auto-rows: minmax(10px, auto);
       
     }
 }
