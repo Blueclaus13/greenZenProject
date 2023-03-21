@@ -271,27 +271,41 @@ footer a {
 }
 
 footer a:nth-child(1):after {
-  content: url("./shapes/french-092A5-20px.png");
+  content: url("./shapes/french.svg");
+  width: 30px;
 }
 
 footer a:nth-child(2):after {
-  content: url("./shapes/drop-092A5-20px.png");
+  content: url("./shapes/drop.svg");
+  width: 30px;
 }
 
 footer a:nth-child(3):after {
-  content: url("./shapes/emerald-092A5-20px.png");
+  content: url("./shapes/emerald.svg");
+  width: 30px;
 }
 
 footer a:nth-child(4):after {
-  content: url("./shapes/halfRose-092A5-20px.png");
+  content: url("./shapes/halfRose.svg");
+  width: 30px;
 }
 
 footer a:nth-child(5):after {
-  content: url("./shapes/heart-092A5-20px.png");
+  content: url("./shapes/heart.svg");
+  width: 30px;
 }
 
 ul {
-  list-style-image: url(shapes/radiant-092A5-small.png);
+  list-style: none;
+}
+
+ul li {
+  display: block;
+  background-image: url("./shapes/radiant.svg");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: left;
+  padding-left: 35px;
 }
 
 header {
