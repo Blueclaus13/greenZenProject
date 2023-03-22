@@ -42,13 +42,14 @@
     grid-area: intro;
     @include set-grid( 4, 1em);
     grid-template-areas: 
-        ". head head head"
+        "picture head head head"
         "summary preamble preamble preamble"
         "summary preamble preamble preamble";
 
 
     @media screen  and (max-width:480px){
       grid-template-areas: 
+        "picture"
         "head"
         "summary"
         "preamble";

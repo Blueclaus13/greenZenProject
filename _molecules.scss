@@ -32,6 +32,21 @@ header {
     
 }
 
+section::before{
+    grid-area: picture;
+    text-align: center;
+    background-image: url('/pictures/Treasure.png');
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    content: "";
+    @media screen  and (max-width:680px){
+        min-height: 150px;
+        min-width: 38vw;
+        background-size: 50% auto;
+      }
+  }
+
 
 
 .summary {

@@ -325,6 +325,23 @@ header {
   }
 }
 
+section::before {
+  grid-area: picture;
+  text-align: center;
+  background-image: url("/pictures/Treasure.png");
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
+}
+@media screen and (max-width: 680px) {
+  section::before {
+    min-height: 150px;
+    min-width: 38vw;
+    background-size: 50% auto;
+  }
+}
+
 .summary {
   grid-area: summary;
   font-weight: 300;
@@ -439,7 +456,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1em;
-  grid-template-areas: ". head head head" "summary preamble preamble preamble" "summary preamble preamble preamble";
+  grid-template-areas: "picture head head head" "summary preamble preamble preamble" "summary preamble preamble preamble";
 }
 @media screen and (max-width: 480px) {
   #zen-intro {
@@ -450,7 +467,7 @@ footer {
 }
 @media screen and (max-width: 480px) {
   #zen-intro {
-    grid-template-areas: "head" "summary" "preamble";
+    grid-template-areas: "picture" "head" "summary" "preamble";
   }
 }
 
