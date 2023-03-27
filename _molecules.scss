@@ -35,7 +35,7 @@ header {
 section::before{
     grid-area: picture;
     text-align: center;
-    background-image: url('/pictures/Treasure.png');
+    background-image: url('./pictures/Treasure.png');
     background-size: 100% auto;
     background-position: center;
     background-repeat: no-repeat;
